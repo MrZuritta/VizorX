@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vizor X</title>
+    <link rel="stylesheet" href="admin.css" />
+    <link rel="stylesheet" href="backup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+    <link rel="stylesheet" href="nav.css" />
+  </head>
+  <body>
+    <span id="cuadro-abajo"></span>
+    <button id="NavButton" class="toggleButton" onclick="show()">
+      <i class="fi fi-rs-burger-menu"></i>
+    </button>
+    <nav class="nav-bar" id="navbar">
+      <div class="navTam">
+        <a class="ListaBox" href="home.html">
+          <div class="enlaces">
+            <i class="fi fi-rr-stats"></i><span>Graph</span>
+          </div></a
+        >
+        <a class="ListaBox" href="altas.html">
+          <div class="enlaces">
+            <i class="fi fi-rs-ballot"></i><span>Altas</span>
+          </div></a
+        >
+        <a class="ListaBox" href="backup.html">
+          <div class="enlaces" id="estadistica-box">
+            <i class="fi fi-rs-ballot"></i><span>Backup</span>
+          </div></a
+        >
+        <a class="ListaBox" id="out" href="login.html" onclick="return false;">
+          <div class="enlaces">
+            <i class="fi fi-rr-exit"></i><span>Out</span>
+          </div>
+        </a>
+      </div>
+    </nav>
+    <main>
+      <!-- aqui comienza el cuadro de tabla backup-->
+      <section class="backup-list">
+        <h1>Lista de Backup</h1>
+        <div id="alinear">
+          <button class="button" id="export-btn" type="button">
+            <span class="button__text">Download</span>
+            <span class="button__icon"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 35 35"
+                id="bdd05811-e15d-428c-bb53-8661459f9307"
+                data-name="Layer 2"
+                class="svg"
+              >
+                <path
+                  d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"
+                ></path>
+                <path
+                  d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"
+                ></path>
+                <path
+                  d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"
+                ></path>
+              </svg>
+            </span>
+          </button>
+          <div class="input-group">
+            <input
+              type="text"
+              id="customSearchInput"
+              placeholder="Buscar en la tabla"
+            />
+          </div>
+        </div>
+        <section id="tablabackup" class="table__body">
+          <table id="backup">
+            <thead>
+              <tr>
+                <th>Agente</th>
+                <th>Status</th>
+                <th>País</th>
+                <th>Creación del Ticket</th>
+                <th>Ticket</th>
+                <th>Issues ML</th>
+                <th>Issues ACC</th>
+                <th>REQ</th>
+                <th>Candidato(a)</th>
+                <th>National ID</th>
+                <th>Cargo</th>
+                <th>Clabe Bancária</th>
+                <th>Departamento</th>
+                <th>Lider</th>
+                <th>Data de ingresso</th>
+                <th>GEID</th>
+                <th class="specific">Comentarios</th>
+              </tr>
+            </thead>
+            <tbody id="backupcontent"></tbody>
+          </table>
+        </section>
+      </section>
+    </main>
+    <!-- Agregar DataTables CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"
+    />
+
+    <!-- Primero carga jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Después, carga DataTables y tu código que lo utiliza -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Agregar DataTables JS -->
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+    <!-- filesaver  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <script src="finsesion.js"></script>
+    <script src="backup.js"></script>
+  </body>
+</html>

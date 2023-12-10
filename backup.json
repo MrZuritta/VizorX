@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "agente": "Cristian",
+      "status": "Cancelada",
+      "pais": "Brasil",
+      "fechaTicket": "2023-12-09",
+      "ticket": "1234",
+      "candidato": "Davi",
+      "nationalID": "12345",
+      "cargo": "Analista",
+      "departamento": "Analitico",
+      "lider": "Toti",
+      "ingreso": "2023-12-19",
+      "geid": "123551241",
+      "comentarios": ""
+    },
+    {
+      "agente": "Cristian",
+      "status": "Finalizada",
+      "pais": "Argentina",
+      "fechaTicket": "2023-12-09",
+      "ticket": "1234124",
+      "candidato": "123412",
+      "nationalID": "3",
+      "cargo": "12313",
+      "departamento": "123",
+      "lider": "123",
+      "ingreso": "2023-10-09",
+      "geid": "",
+      "comentarios": "",
+      "username": "Cristian"
+    },
+    {
+      "agente": "Cristian",
+      "status": "Finalizada",
+      "pais": "Mexico",
+      "fechaTicket": "2023-12-13",
+      "ticket": "1234",
+      "candidato": "124124",
+      "nationalID": "12314",
+      "cargo": "1231",
+      "departamento": "124124",
+      "lider": "12414",
+      "ingreso": "2023-10-04",
+      "geid": "124124",
+      "comentarios": ""
+    },
+    {
+      "agente": "Cristian",
+      "status": "Cancelada",
+      "pais": "Colombia",
+      "fechaTicket": "2023-12-09",
+      "ticket": "12421",
+      "candidato": "Jesus",
+      "nationalID": "12345",
+      "cargo": "Analitico",
+      "departamento": "Social",
+      "lider": "Toti",
+      "ingreso": "2023-12-16",
+      "geid": "124124",
+      "comentarios": ""
+    }
+  ]
+}

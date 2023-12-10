@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vizor X</title>
+  </head>
+  <div class="wave"></div>
+  <body>
+    <link rel="stylesheet" href="login.css" />
+
+    <div class="titulo">
+      <img src="ico.ico" alt="" />
+      <h1><strong>Vizor X</strong></h1>
+      <p>Powered by Cristian Zurita</p>
+    </div>
+
+    <div class="container">
+      <div class="form_area">
+        <p class="title">LOGIN</p>
+        <form action="" id="loginForm">
+          <div class="form_group">
+            <label class="sub_title" for="name">Name</label>
+            <input
+              placeholder="Enter Your Username"
+              class="form_style"
+              type="text"
+              id="uname"
+              name="uname"
+              required />
+          </div>
+          <div class="form_group">
+            <label class="sub_title" for="password">Password</label>
+            <input
+              placeholder="Enter your password"
+              class="form_style"
+              type="password"
+              id="pwd"
+              name="pwd"
+              required />
+          </div>
+          <label for="password" id="error"
+            >Clave Inválida, por favor intente nuevamente</label
+          >
+          <input type="submit" class="btn" value="Submit" />
+        </form>
+      </div>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "user": "Usuario",
+      "password": "1234",
+      "admin": "true"
+    }
+  ],
+  "data": [
+    {
+      "agente": "Usuario",
+      "status": "En Curso",
+      "pais": "Argentina",
+      "fechaTicket": "2023-12-12",
+      "ticket": "test",
+      "candidato": "124",
+      "nationalID": "123",
+      "cargo": "1241",
+      "departamento": "1241",
+      "lider": "ESTO ES UN TEST",
+      "ingreso": "2023-12-29",
+      "geid": "",
+      "comentarios": "",
+      "username": "Usuario"
+    }
+  ]
+}

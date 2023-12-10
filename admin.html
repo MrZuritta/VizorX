@@ -1,0 +1,273 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vizor X</title>
+  <link rel="stylesheet" href="admin.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css"
+  />
+  <link rel="stylesheet" href="nav.css" />
+</head>
+
+<body>
+  <span id="cuadro-abajo"></span>
+  <!-- este es el nav  -->
+  <button id="NavButton" class="toggleButton" onclick="show()">
+    <i class="fi fi-rs-burger-menu"></i>
+  </button>
+  <nav class="nav-bar" id="navbar">
+    <div class="navTam">
+      <a class="ListaBox" href="homeadmin.html">
+        <div class="enlaces">
+          <i class="fi fi-rr-stats"></i><span>Graph</span>
+        </div></a
+      >
+      <a class="ListaBox" href="altasadmin.html">
+        <div class="enlaces" >
+          <i class="fi fi-rs-ballot"></i><span>Altas</span>
+        </div></a
+      >
+      <a class="ListaBox" href="backupadmin.html">
+        <div class="enlaces">
+          <i class="fi fi-rs-ballot"></i><span>Backup</span>
+        </div></a>
+      <a class="ListaBox" href="admin.html">
+        <div class="enlaces" id="estadistica-box">
+          <i class="fi fi-rs-users-gear"></i><span>Admin</span>
+        </div>
+      </a>
+      <a class="ListaBox" id="out" href="login.html" onclick="return false;">
+        <div class="enlaces">
+          <i class="fi fi-rr-exit"></i><span>Out</span>
+        </div>
+      </a>
+    </div>
+  </nav>
+  <!-- aqui termina el nav  -->
+
+  <!-- cuadro de ediciones y cadastro  -->
+  <section id="cuadro">
+    <button id="delete-cuadro" class="deleteBtn" onclick="quitarAddUser()">
+      X
+    </button>
+    <form id="user-form" class="form_group">
+      <input type="hidden" class="form_style" id="edit-index" />
+      <label for="user-input">Usuario:</label>
+
+      <input type="text" class="form_style" id="user-input" />
+      <label for="password-input">Contraseña:</label>
+      <input type="text" class="form_style" id="password-input" />
+
+      <label for="admin-input">¿Es Admin?</label>
+      <select id="admin-input" class="form_style">
+        <option value="true">Si</option>
+        <option value="false">No</option>
+      </select>
+
+      <button type="submit">Guardar</button>
+    </form>
+  </section>
+  <!-- aqui termina el cuadro de ediciones y cadastro  -->
+  <main>
+    <!-- cuadro de cadastro  -->
+    <article>
+      <section id="cadastro-list">
+        <button
+          type="button"
+          class="button"
+          id="button-create"
+          onclick="mostrar()"
+        >
+          <span class="button__text">Cadastrar</span>
+          <span class="button__icon"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              stroke="currentColor"
+              height="24"
+              fill="none"
+              class="svg"
+            >
+              <line y2="19" y1="5" x2="12" x1="12"></line>
+              <line y2="12" y1="12" x2="19" x1="5"></line>
+            </svg>
+          </span>
+        </button>
+        <!-- aqui comienza la tabla  -->
+        <section id="table" class="table__body">
+          <table id="miTabla">
+            <thead>
+              <tr>
+                <th>Usuario</th>
+                <th>Contraseña</th>
+                <th>Admin</th>
+                <th>Ediciones</th>
+              </tr>
+            </thead>
+            <tbody id="content"></tbody>
+          </table>
+        </section>
+      </section>
+
+      <div id="news-align">
+        <button
+          type="button"
+          class="button"
+          id="addnewbtn"
+          onclick="mostraraddnew()"
+        >
+          <span class="button__text">Adicionar</span>
+          <span class="button__icon"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              stroke="currentColor"
+              height="24"
+              fill="none"
+              class="svg"
+            >
+              <line y2="19" y1="5" x2="12" x1="12"></line>
+              <line y2="12" y1="12" x2="19" x1="5"></line>
+            </svg>
+          </span>
+        </button>
+
+        <section id="news-container">
+          <div class="left" id="left-news"></div>
+          <div class="right-text" id="noticia-completa">
+            <div class="txtresultado"></div>
+          </div>
+        </section>
+      </div>
+    </article>
+    <!-- Formulario para añadir una nueva noticia -->
+    <div id="addnewModal" class="modal" style="display: none">
+      <button id="Adddit" class="deleteBtn" onclick="quitarAddnew()">X</button>
+      <form id="newsAdd" class="form_group">
+        <div class="form_cada">
+          <input
+            type="text"
+            id="titulo"
+            name="titulo"
+            placeholder="titulo"
+            class="form_style"
+          />
+        </div>
+        <div class="form_cada">
+          <input
+            type="text"
+            id="previa"
+            name="previa"
+            placeholder="previa"
+            class="form_style"
+          />
+        </div>
+        <div class="form_cada">
+          <input
+            type="date"
+            id="fecha"
+            name="fecha"
+            placeholder="fecha"
+            class="form_style"
+          />
+        </div>
+        <div class="form_cada">
+          <textarea
+            cols="20"
+            rows="10"
+            id="contenido"
+            name="contenido"
+            placeholder="contenido"
+            class="form_style"
+          >
+          </textarea>
+        </div>
+        <div class="form_cada1">
+          <input type="submit" value="submit" class="button-cuadro" />
+        </div>
+      </form>
+    </div>
+
+    <div id="editModal" class="modal" style="display: none">
+      <button id="quitarEdit" class="deleteBtn" onclick="quitar()">X</button>
+      <form id="newsEdit" class="form_group">
+        <h1>Edicion Noticias</h1>
+        <div class="form_cada">
+          <input
+            type="text"
+            class="form_style"
+            id="edittitulo"
+            name="edittitulo"
+            placeholder="titulo"
+          />
+        </div>
+        <div class="form_cada">
+          <input
+            type="text"
+            id="editprevia"
+            class="form_style"
+            name="editprevia"
+            placeholder="previa"
+          />
+        </div>
+        <div class="form_cada">
+          <input
+            type="date"
+            id="editfecha"
+            class="form_style"
+            name="editfecha"
+            placeholder="fecha"
+          />
+        </div>
+        <div class="form_cada">
+          <textarea
+            cols="200"
+            rows="10"
+            id="editcontenido"
+            class="form_style"
+            name="editcontenido"
+            placeholder="contenido"
+          >
+          </textarea>
+        </div>
+        <div class="form_cada1">
+          <input type="submit" value="submit" class="button-cuadro" />
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <div id="news-list"></div>
+  <!-- Agregar DataTables CSS -->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"
+  />
+
+  <!-- Primero carga jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Después, carga DataTables y tu código que lo utiliza -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Agregar DataTables JS -->
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <script src="finsesion.js"></script>
+  <script src="admin.js"></script>
+</body>

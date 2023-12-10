@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vizor X</title>
+    <link rel="stylesheet" href="home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+    <link rel="stylesheet" href="nav.css" />
+  </head>
+  <body>
+    <span id="cuadro-abajo"></span>
+    <button id="NavButton" class="toggleButton" onclick="show()">
+      <i class="fi fi-rs-burger-menu"></i>
+    </button>
+    <nav class="nav-bar" id="navbar">
+      <div class="navTam">
+        <a class="ListaBox" href="home.html">
+          <div class="enlaces" id="estadistica-box">
+            <i class="fi fi-rr-stats"></i><span>Graph</span>
+          </div></a
+        >
+        <a class="ListaBox" href="altas.html">
+          <div class="enlaces">
+            <i class="fi fi-rs-ballot"></i><span>Altas</span>
+          </div></a>
+          <a class="ListaBox" href="backup.html">
+            <div class="enlaces"  >
+              <i class="fi fi-rs-ballot"></i><span>Backup</span>
+            </div></a>
+        <a class="ListaBox" id="out" href="login.html" onclick="return false;">
+          <div class="enlaces">
+            <i class="fi fi-rr-exit"></i><span>Out</span>
+          </div>
+        </a>
+      </div>
+    </nav>
+    <main>
+      <div class="filtrosLog">
+        <div class="centrar">
+          <div class="wrapper">
+            <div class="option">
+              <input
+                class="input"
+                type="radio"
+                name="btn"
+                value="enCurso"
+                checked=""
+              />
+              <div class="btn">
+                <span class="span">En Curso</span>
+              </div>
+            </div>
+
+            <div class="option">
+              <input class="input" type="radio" name="btn" value="canceladas" />
+              <div class="btn">
+                <span class="span">Canceladas</span>
+              </div>
+            </div>
+
+            <div class="option">
+              <input class="input" type="radio" name="btn" value="acc" />
+              <div class="btn">
+                <span class="span">Pendientes ACC Para Finalizar</span>
+              </div>
+            </div>
+
+            <div class="option">
+              <input class="input" type="radio" name="btn" value="ml" />
+              <div class="btn">
+                <span class="span">Pendientes ML/Candidato Para Finalizar</span>
+              </div>
+            </div>
+
+            <div class="option">
+              <input
+                class="input"
+                type="radio"
+                name="btn"
+                value="finalizadas"
+              />
+              <div class="btn">
+                <span class="span">Finalizadas</span>
+              </div>
+            </div>
+
+            <div class="option">
+              <input class="input" type="radio" name="btn" value="noshow" />
+              <div class="btn">
+                <span class="span">No-Show</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <article class="estadisticas">
+        <div class="carousel-container">
+          <!-- clasificación de "en curso" -->
+          <div class="listBox enCurso" data-state="enCurso">
+            <canvas id="cursoargentina"></canvas>
+          </div>
+          <div class="listBox enCurso" data-state="enCurso">
+            <canvas id="cursobrasil"></canvas>
+          </div>
+          <div class="listBox enCurso" data-state="enCurso">
+            <canvas id="cursoprovida"></canvas>
+          </div>
+          <div class="listBox enCurso" data-state="enCurso">
+            <canvas id="cursoseguros"></canvas>
+          </div>
+          <div class="listBox enCurso" data-state="enCurso">
+            <canvas id="cursocolombia"></canvas>
+          </div>
+          <div class="listBox enCurso" data-state="enCurso">
+            <canvas id="cursomexico"></canvas>
+          </div>
+          <div class="listBox enCurso" data-state="enCurso">
+            <canvas id="cursomexicoML"></canvas>
+          </div>
+          <div class="listBox enCurso" data-state="enCurso">
+            <canvas id="cursouruguay"></canvas>
+          </div>
+          <!-- clasificación de finalizadas  -->
+          <div class="listBox finalizados" data-state="finalizadas">
+            <canvas id="finalizadasargentina"></canvas>
+          </div>
+          <div class="listBox finalizados" data-state="finalizadas">
+            <canvas id="finalizadasbrasil"></canvas>
+          </div>
+          <div class="listBox finalizados" data-state="finalizadas">
+            <canvas id="finalizadasprovida"></canvas>
+          </div>
+          <div class="listBox finalizados" data-state="finalizadas">
+            <canvas id="finalizadasseguros"></canvas>
+          </div>
+          <div class="listBox finalizados" data-state="finalizadas">
+            <canvas id="finalizadascolombia"></canvas>
+          </div>
+          <div class="listBox finalizados" data-state="finalizadas">
+            <canvas id="finalizadasmexico"></canvas>
+          </div>
+          <div class="listBox finalizados" data-state="finalizadas">
+            <canvas id="finalizadasmexicoML"></canvas>
+          </div>
+          <div class="listBox finalizados" data-state="finalizadas">
+            <canvas id="finalizadasuruguay"></canvas>
+          </div>
+          <!-- clasificación de Cancelada  -->
+          <div class="listBox canceladas" data-state="canceladas">
+            <canvas id="canceladasargentina"></canvas>
+          </div>
+          <div class="listBox canceladas" data-state="canceladas">
+            <canvas id="canceladasbrasil"></canvas>
+          </div>
+          <div class="listBox canceladas" data-state="canceladas">
+            <canvas id="canceladasprovida"></canvas>
+          </div>
+          <div class="listBox canceladas" data-state="canceladas">
+            <canvas id="canceladasseguros"></canvas>
+          </div>
+          <div class="listBox canceladas" data-state="canceladas">
+            <canvas id="canceladascolombia"></canvas>
+          </div>
+          <div class="listBox canceladas" data-state="canceladas">
+            <canvas id="canceladasmexico"></canvas>
+          </div>
+          <div class="listBox canceladas" data-state="canceladas">
+            <canvas id="canceladasmexicoML"></canvas>
+          </div>
+          <div class="listBox canceladas" data-state="canceladas">
+            <canvas id="canceladasuruguay"></canvas>
+          </div>
+          <!-- clasificación de acc  -->
+          <div class="listBox acc" data-state="acc">
+            <canvas id="accargentina"></canvas>
+          </div>
+          <div class="listBox acc" data-state="acc">
+            <canvas id="accbrasil"></canvas>
+          </div>
+          <div class="listBox acc" data-state="acc">
+            <canvas id="accprovida"></canvas>
+          </div>
+          <div class="listBox acc" data-state="acc">
+            <canvas id="accseguros"></canvas>
+          </div>
+          <div class="listBox acc" data-state="acc">
+            <canvas id="acccolombia"></canvas>
+          </div>
+          <div class="listBox acc" data-state="acc">
+            <canvas id="accmexico"></canvas>
+          </div>
+          <div class="listBox acc" data-state="acc">
+            <canvas id="accmexicoML"></canvas>
+          </div>
+          <div class="listBox acc" data-state="acc">
+            <canvas id="accuruguay"></canvas>
+          </div>
+          <!-- clasificación de ML  -->
+          <div class="listBox ml" data-state="ml">
+            <canvas id="mlargentina"></canvas>
+          </div>
+          <div class="listBox ml" data-state="ml">
+            <canvas id="mlbrasil"></canvas>
+          </div>
+          <div class="listBox ml" data-state="ml">
+            <canvas id="mlprovida"></canvas>
+          </div>
+          <div class="listBox ml" data-state="ml">
+            <canvas id="mlseguros"></canvas>
+          </div>
+          <div class="listBox ml" data-state="ml">
+            <canvas id="mlcolombia"></canvas>
+          </div>
+          <div class="listBox ml" data-state="ml">
+            <canvas id="mlmexico"></canvas>
+          </div>
+          <div class="listBox ml" data-state="ml">
+            <canvas id="mlmexicoML"></canvas>
+          </div>
+          <div class="listBox ml" data-state="ml">
+            <canvas id="mluruguay"></canvas>
+          </div>
+          <!-- clasificación de NOSHOW  -->
+          <div class="listBox noshow" data-state="noshow">
+            <canvas id="noshowargentina"></canvas>
+          </div>
+          <div class="listBox noshow" data-state="noshow">
+            <canvas id="noshowbrasil"></canvas>
+          </div>
+          <div class="listBox noshow" data-state="noshow">
+            <canvas id="noshowseguros"></canvas>
+          </div>
+          <div class="listBox noshow" data-state="noshow">
+            <canvas id="noshowprovida"></canvas>
+          </div>
+          <div class="listBox noshow" data-state="noshow">
+            <canvas id="noshowcolombia"></canvas>
+          </div>
+          <div class="listBox noshow" data-state="noshow">
+            <canvas id="noshowmexico"></canvas>
+          </div>
+          <div class="listBox noshow" data-state="noshow">
+            <canvas id="noshowmexicoML"></canvas>
+          </div>
+          <div class="listBox noshow" data-state="noshow">
+            <canvas id="noshowuruguay"></canvas>
+          </div>
+        </div>
+        <button class="prev-button" id="left" onclick="changeSlide(-1)">
+          <i class="fi fi-rr-angle-small-left"></i>
+        </button>
+        <button class="next-button" id="right" onclick="changeSlide(1)">
+          <i class="fi fi-rr-angle-small-right"></i>
+        </button>
+      </article>
+
+      <!-- parte de noticias  -->
+      <article class="estadisticasGeneral">
+        <div id="news-container">
+          <div id="left-news"></div>
+          <div class="right">
+            <div id="noticia-completa">
+              <p></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- cuadro del donnut graphich  -->
+        <div class="generalArticle2">
+          <h1>Total Por Países</h1>
+          <div>
+            <canvas id="mediostac"></canvas>
+          </div>
+        </div>
+      </article>
+      <!-- parte de abajo  -->
+      <article class="estadisticasAbajo">
+        <section class="table__body" onload="cambiarColorTexto()">
+          <div id="alinear">
+            <button class="button" id="export-btn" type="button">
+              <span class="button__text">Download</span>
+              <span class="button__icon"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 35 35"
+                  id="bdd05811-e15d-428c-bb53-8661459f9307"
+                  data-name="Layer 2"
+                  class="svg"
+                >
+                  <path
+                    d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"
+                  ></path>
+                  <path
+                    d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"
+                  ></path>
+                  <path
+                    d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"
+                  ></path></svg></span>
+            </button>
+
+            <div class="input-group">
+              <input
+                type="text"
+                id="customSearchInput"
+                placeholder="Buscar en la tabla"
+              />
+            </div>
+          </div>
+          <table id="miTabla">
+            <thead>
+              <tr>
+                <th>Agente</th>
+                <th>Status</th>
+                <th>País</th>
+                <th>Creación del Ticket</th>
+                <th>Ticket</th>
+                <th>Candidato(a)</th>
+                <th>National ID</th>
+                <th>Cargo</th>
+                <th>Departamento</th>
+                <th>Lider</th>
+                <th>Data de ingreso</th>
+                <th>ID EMPRESARIAL</th>
+                <th class="specific">Comentarios</th>
+              </tr>
+            </thead>
+            <tbody id="content"></tbody>
+          </table>
+        </section>
+      </article>
+    </main>
+
+    <!-- Agregar DataTables CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"
+    />
+
+    <!-- Primero carga jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Después, carga DataTables y tu código que lo utiliza -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Agregar DataTables JS -->
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <!-- filesaver  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+        
+    <script src="encurso.js"></script>
+    <script src="noshow.js"></script>
+    <script src="finalizadas.js"></script>
+    <script src="pendientesacc.js"></script>
+    <script src="pendientesml.js"></script>
+    <script src="canceladas.js"></script>
+    <script src="finsesion.js"></script>
+    <script src="home.js"></script>
+  </body>
+</html>

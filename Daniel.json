@@ -1,0 +1,43 @@
+{
+  "users": [
+    {
+      "user": "Daniel",
+      "password": "123",
+      "admin": "false"
+    }
+  ],
+  "data": [
+    {
+      "agente": "Daniel",
+      "status": "En Curso",
+      "pais": "Argentina",
+      "fechaTicket": "2023-12-09",
+      "ticket": "12421",
+      "candidato": "Antonio",
+      "nationalID": "12345",
+      "cargo": "Analitico",
+      "departamento": "Social",
+      "lider": "Toti",
+      "ingreso": "2023-12-16",
+      "geid": "124124",
+      "comentarios": "",
+      "username": "Daniel"
+    },
+    {
+      "agente": "Daniel",
+      "status": "En Curso",
+      "pais": "Argentina",
+      "fechaTicket": "2023-12-09",
+      "ticket": "12421",
+      "candidato": "Antonio",
+      "nationalID": "12345",
+      "cargo": "Analitico",
+      "departamento": "Social",
+      "lider": "Toti",
+      "ingreso": "2023-12-16",
+      "geid": "124124",
+      "comentarios": "",
+      "username": "Daniel"
+    }
+  ]
+}

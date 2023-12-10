@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "user": "Sindy",
+      "password": "123",
+      "admin": "true"
+    }
+  ],
+  "data": [
+    {
+      "status": "Finalizada",
+      "pais": "colombia",
+      "fechaTicket": "a",
+      "ticket": "ticket1",
+      "candidato": "candidato1",
+      "nationalID": "nationalID1",
+      "cargo": "cargo1",
+      "departamento": "departamento1",
+      "lider": "lider1",
+      "ingreso": "ingreso1",
+      "geid": "id1",
+      "comentarios": "comentarios1"
+    }
+  ]
+}

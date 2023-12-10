@@ -1,0 +1,28 @@
+{
+  "name": "vizor-x",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^26.3.0"
+  },
+  "dependencies": {
+    "electron-store": "^8.1.0",
+    "standard": "^17.1.0",
+    "xlsx": "^0.18.5"
+  },
+  "build": {
+    "appId": "Vizor-X",
+    "productName": "VizorX",
+    "win": {
+      "icon": "ico.ico"
+    }
+  }
+}

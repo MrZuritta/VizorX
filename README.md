@@ -1,1 +1,1 @@
-# VizorX
+# Vizor-X-Dashboard

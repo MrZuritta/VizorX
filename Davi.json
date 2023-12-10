@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "user": "Davi",
+      "password": "1234",
+      "admin": "true"
+    }
+  ],
+  "data": [
+    {
+      "agente": "Davi",
+      "status": "En Curso",
+      "pais": "Mexico",
+      "fechaTicket": "2023-12-16",
+      "ticket": "124142",
+      "candidato": "12",
+      "nationalID": "12",
+      "cargo": "12",
+      "departamento": "12",
+      "lider": "12",
+      "ingreso": "0012-12-12",
+      "geid": "1243154",
+      "comentarios": "",
+      "username": "Davi"
+    }
+  ]
+}

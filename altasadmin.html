@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vizor X</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel="stylesheet" href="altas.css" />
+    <link rel="stylesheet" href="nav.css" />
+  </head>
+  <body>
+    <button id="NavButton" class="toggleButton" onclick="show()">
+      <i class="fi fi-rs-burger-menu"></i>
+    </button>
+    <nav class="nav-bar" id="navbar">
+      <div class="navTam">
+        <a class="ListaBox" href="homeadmin.html">
+          <div class="enlaces">
+            <i class="fi fi-rr-stats"></i><span>Graph</span>
+          </div></a
+        >
+        <a class="ListaBox" href="altasadmin.html">
+          <div class="enlaces" id="estadistica-box">
+            <i class="fi fi-rs-ballot"></i><span>Altas</span>
+          </div></a
+        >
+        <a class="ListaBox" href="backupadmin.html">
+          <div class="enlaces">
+            <i class="fi fi-rs-ballot"></i><span>Backup</span>
+          </div></a>
+        <a class="ListaBox" href="admin.html">
+          <div class="enlaces">
+            <i class="fi fi-rs-users-gear"></i><span>Admin</span>
+          </div>
+        </a>
+        <a class="ListaBox" id="out" href="login.html" onclick="return false;">
+          <div class="enlaces">
+            <i class="fi fi-rr-exit"></i><span>Out</span>
+          </div>
+        </a>
+      </div>
+    </nav>
+
+    <!-- este es el cuadro que se abre al accionar el boton  -->
+    <span id="cuadro-abajo"></span>
+
+    <!-- aqui va la seccion de cadastro  -->
+    <section id="cuadro">
+      <div class="top-modal">
+        <button id="delete-cuadro" class="deleteBtn" onclick="quitar()">
+          X
+        </button>
+        <h2 style="color: white">Modo Cadastro</h2>
+      </div>
+      <form id="data-form" class="form_group">
+        <div class="form_cada">
+          <label for="status">Status:</label><br />
+          <select class="form_style" id="status" name="status" required>
+            <option>En Curso</option>
+            <option>Finalizada</option>
+            <option>Cancelada</option>
+            <option>Pendiente</option>
+          </select>
+          <br /><br />
+        </div>
+
+        <div class="form_cada">
+          <label for="pais">Pais:</label><br />
+          <select class="form_style" id="pais" name="pais" required>
+            <option>Argentina</option>
+            <option>Brasil</option>
+            <option>Colombia</option>
+            <option>Mexico</option>
+            <option>Uruguay</option>
+          </select>
+          <br /><br />
+        </div>
+
+        <div class="form_cada">
+          <label for="fechaTicket">Fecha de creación del Ticket</label><br />
+          <input
+            type="date"
+            class="form_style"
+            id="fechaTicket"
+            name="fechaTicket"
+            placeholder="Fecha de creación del ticket"
+            required
+          /><br /><br />
+        </div>
+
+        <div class="form_cada">
+          <label for="ticket">Ticket</label><br />
+          <input
+            type="text"
+            class="form_style"
+            id="ticket"
+            name="ticket"
+            placeholder="Ticket"
+            required
+          /><br /><br />
+        </div>
+
+        <div class="form_cada">
+          <label for="candidato">Candidato</label><br />
+          <input
+            type="text"
+            class="form_style"
+            id="candidato"
+            name="candidato"
+            placeholder="Candidato"
+            required
+          /><br /><br />
+        </div>
+
+        <div class="form_cada">
+          <label for="nationalID">National ID</label><br />
+          <input
+            type="text"
+            class="form_style"
+            id="nationalID"
+            name="nationalID"
+            placeholder="National ID"
+            required
+          /><br /><br />
+        </div>
+
+        <div class="form_cada">
+          <label for="cargo">Cargo</label><br />
+          <input
+            type="text"
+            class="form_style"
+            id="cargo"
+            name="cargo"
+            placeholder="Cargo"
+          /><br /><br />
+        </div>
+
+
+        <div class="form_cada">
+          <label for="departamento">Departamento</label><br />
+          <input
+            type="text"
+            class="form_style"
+            id="departamento"
+            name="departamento"
+            placeholder="Departamento"
+          /><br /><br />
+        </div>
+
+        <div class="form_cada">
+          <label for="Lider">Lider</label><br />
+          <input
+            type="text"
+            class="form_style"
+            id="Lider"
+            name="Lider"
+            placeholder="Lider"
+          /><br /><br />
+        </div>
+
+        <div class="form_cada">
+          <label for="ingreso">Ingreso</label><br />
+          <input
+            type="date"
+            class="form_style"
+            id="ingreso"
+            name="ingreso"
+            placeholder="Ingreso"
+          /><br /><br />
+        </div>
+
+        <div class="form_cada">
+          <label for="geid">ID</label><br />
+          <input
+            type="text"
+            class="form_style"
+            id="geid"
+            name="geid"
+            placeholder="Geid Creado"
+          /><br /><br />
+        </div>
+
+        <div class="form_cada">
+          <label for="comentarios">Comentarios</label><br />
+          <input
+            type="text"
+            class="form_style"
+            id="comentarios"
+            name="comentarios"
+            placeholder="Comentarios"
+          /><br /><br />
+        </div>
+        <div class="form_cada1">
+          <input
+            type="submit"
+            class="button-cuadro"
+            id="enviarDatos"
+            value="Submit"
+          />
+        </div>
+      </form>
+    </section>
+    <!-- aqui termina caja de cadastro  -->
+
+    <!-- caja de edicion  -->
+    <div id="editModal" class="modal">
+      <div class="top-modal">
+        <button id="quitarEdit" class="deleteBtn" onclick="quitaredit()">
+          X
+        </button>
+        <h2>Modo Edición</h2>
+      </div>
+      <div class="modal-content">
+        <form id="editForm">
+          <div class="form_cada">
+            <label for="editstatus">Status:</label><br />
+            <select
+              class="form_style"
+              id="editstatus"
+              name="editstatus"
+              required
+              onchange="habilitarCampo()"
+            >
+              <option>En Curso</option>
+              <option>Cancelada</option>
+              <option>Pendiente</option>
+            </select>
+            <br /><br />
+          </div>
+
+          <div class="form_cada">
+            <label for="editpais">Pais:</label><br />
+            <select class="form_style" id="editpais" name="editpais">
+              <option>Argentina</option>
+              <option>Brasil</option>
+              <option>Colombia</option>
+              <option>Mexico</option>
+              <option>Uruguay</option>
+            </select>
+            <br /><br />
+          </div>
+
+          <div class="form_cada">
+            <label for="editfechaTicket">Fecha de creación del Ticket</label
+            ><br />
+            <input
+              type="date"
+              class="form_style"
+              id="editfechaTicket"
+              name="editfechaTicket"
+              placeholder="Fecha de creación del ticket"
+              required
+            /><br /><br />
+          </div>
+
+          <div class="form_cada">
+            <label for="editticket">Ticket:</label><br />
+            <input
+              type="text"
+              class="form_style"
+              id="editticket"
+              name="editticket"
+            /><br /><br />
+          </div>
+
+          <div class="form_cada">
+            <label for="editcandidato">Candidato:</label><br />
+            <input
+              type="text"
+              class="form_style"
+              id="editcandidato"
+              name="editcandidato"
+            /><br /><br />
+          </div>
+
+          <div class="form_cada">
+            <label for="editnationalID">National ID:</label><br />
+            <input
+              type="text"
+              class="form_style"
+              id="editnationalID"
+              name="editnationalID"
+            /><br /><br />
+          </div>
+
+          <div class="form_cada">
+            <label for="editcargo">Cargo:</label><br />
+            <input
+              type="text"
+              class="form_style"
+              id="editcargo"
+              name="editcargo"
+            /><br /><br />
+          </div>
+
+          <div class="form_cada">
+            <label for="editdepartamento">Departamento</label><br />
+            <input
+              type="text"
+              class="form_style"
+              id="editdepartamento"
+              name="editdepartamento"
+              placeholder="Departamento"
+            /><br /><br />
+          </div>
+
+          <div class="form_cada">
+            <label for="editLider">Lider</label><br />
+            <input
+              type="text"
+              class="form_style"
+              id="editLider"
+              name="editLider"
+              placeholder="Lider"
+            /><br /><br />
+          </div>
+
+          <div class="form_cada">
+            <label for="editingreso">Ingreso:</label><br />
+            <input
+              type="date"
+              class="form_style"
+              id="editingreso"
+              name="editingreso"
+            /><br /><br />
+          </div>
+
+          <div class="form_cada">
+            <label for="editgeid">ID EMPRESARIAL</label><br />
+            <input
+              type="text"
+              class="form_style"
+              id="editgeid"
+              name="editgeid"
+              oninput="updateStatus()"
+            /><br /><br />
+          </div>
+          <br />
+
+          <div class="form_cada">
+            <label for="editcomentarios">Comentarios:</label><br />
+            <input
+              type="text"
+              class="form_style"
+              id="editcomentarios"
+              name="comentarios"
+            /><br /><br />
+          </div>
+          <div class="form_cada1">
+            <button type="submit" class="button-cuadro" id="botonEdit">Guardar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- aqui comienza mi main  -->
+    <main class="table">
+      <!-- caja de ediciones  -->
+
+      <section class="table__header">
+        <h1>Creacion de Altas</h1>
+        <div class="input-group">
+          <input
+            type="text"
+            id="customSearchInput"
+            placeholder="Buscar en la tabla"
+          />
+        </div>
+        <!-- aqui comienza botor importar csv  -->
+        <div>
+          <input type="file" id="csvInput" />
+          <label for="csvInput" id="customButton"
+            >Seleccionar Archivo CSV</label
+          >
+          <button onclick="convertCsvToJson()" id="importbtn">+</button>
+        </div>
+        <!-- aqui termina boton importar csv  -->
+        <!-- boton para accionar cuadro de adicionar datos  -->
+        <button
+          type="button"
+          class="button"
+          id="button-create"
+          onclick="mostrar()"
+        >
+          <span class="button__text">Adicionar</span>
+          <span class="button__icon"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              stroke="currentColor"
+              height="24"
+              fill="none"
+              class="svg"
+            >
+              <line y2="19" y1="5" x2="12" x1="12"></line>
+              <line y2="12" y1="12" x2="19" x1="5"></line>
+            </svg>
+          </span>
+        </button>
+      </section>
+      <!-- seccion de la tabla   -->
+      <section class="table__body" onload="cambiarColorTexto()">
+        <table id="miTabla">
+          <thead>
+            <tr>
+              <th>Agente</th>
+              <th>Status</th>
+              <th>País</th>
+              <th>Creación del Ticket</th>
+              <th>Ticket</th>
+              <th>Candidato(a)</th>
+              <th>National ID</th>
+              <th>Cargo</th>
+              <th>Departamento</th>
+              <th>Lider</th>
+              <th>Data de ingreso</th>
+              <th>ID EMPRESARIAL</th>
+              <th>Comentarios</th>
+              <th class="specific">Ediciones</th>
+            </tr>
+          </thead>
+          <tbody id="content"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <!-- Agregar DataTables CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"
+    />
+
+    <!-- Primero carga jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Después, carga DataTables y tu código que lo utiliza -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Agregar DataTables JS -->
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+    <!-- convertir a json csv  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="finsesion.js"></script>
+    <script src="csv.js"></script>
+    <script src="altas.js"></script>
+  </body>
+</html>

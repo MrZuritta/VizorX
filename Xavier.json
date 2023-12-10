@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "user": "Xavier",
+      "password": "1231",
+      "admin": "false"
+    }
+  ],
+  "data": []
+}

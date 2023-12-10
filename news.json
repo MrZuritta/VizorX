@@ -1,0 +1,26 @@
+[
+  {
+    "titulo": "Esto es una noticia",
+    "previa": "Esta es la previa",
+    "fecha": "2023-12-08",
+    "contenido": "este es el contenido de mi noticia"
+  },
+  {
+    "titulo": "12341",
+    "previa": "412421414",
+    "fecha": "1241-04-12",
+    "contenido": "          12412414214"
+  },
+  {
+    "titulo": "Isso é um test",
+    "previa": "test",
+    "fecha": "11111-11-11",
+    "contenido": "         Isso é uma noticia teste "
+  },
+  {
+    "titulo": "Esto es otro test",
+    "previa": "nuevo test",
+    "fecha": "2023-12-10",
+    "contenido": "          aqui va un nuevo test"
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "users": [
+    {
+      "user": "Cristian",
+      "password": "clave",
+      "admin": "true"
+    }
+  ],
+  "data": [
+    {
+      "agente": "Cristian",
+      "status": "En Curso",
+      "pais": "Argentina",
+      "fechaTicket": "2023-12-09",
+      "ticket": "12421",
+      "candidato": "Antonio",
+      "nationalID": "12345",
+      "cargo": "Analitico",
+      "departamento": "Social",
+      "lider": "Toti",
+      "ingreso": "2023-12-16",
+      "geid": "124124",
+      "comentarios": "",
+      "username": "Cristian"
+    },
+    {
+      "agente": "Cristian",
+      "status": "En Curso",
+      "pais": "Brasil",
+      "fechaTicket": "2023-12-09",
+      "ticket": "12421",
+      "candidato": "Jesus",
+      "nationalID": "12345",
+      "cargo": "Analitico",
+      "departamento": "Social",
+      "lider": "Toti",
+      "ingreso": "2023-12-16",
+      "geid": "124124",
+      "comentarios": "",
+      "username": "Cristian"
+    },
+    {
+      "agente": "Cristian",
+      "status": "Pendiente",
+      "pais": "Argentina",
+      "fechaTicket": "2023-12-16",
+      "ticket": "1",
+      "candidato": "1",
+      "nationalID": "1",
+      "cargo": "1",
+      "departamento": "1",
+      "lider": "1",
+      "ingreso": "2023-12-15",
+      "geid": "123123",
+      "comentarios": "",
+      "username": "Cristian"
+    }
+  ]
+}
